@@ -15,7 +15,6 @@ public class WebDriverSettings {
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
-        //написать ридми
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
     }
