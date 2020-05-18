@@ -2,10 +2,7 @@ package com.automationpractice.signIn;
 
 import com.automationpractice.WebDriverSettings;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 public class SignIn extends WebDriverSettings {
 
     @Test

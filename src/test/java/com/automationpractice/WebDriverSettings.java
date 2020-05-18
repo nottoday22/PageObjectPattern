@@ -1,5 +1,6 @@
 package com.automationpractice;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -13,8 +14,8 @@ public class WebDriverSettings {
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
-
+        WebDriverManager.chromedriver().setup();
+        //написать ридми
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
     }

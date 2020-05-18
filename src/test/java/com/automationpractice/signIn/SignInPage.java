@@ -17,9 +17,11 @@ public class SignInPage {
     }
 
     @FindBy(id = "email")
-    private WebElement emailForm;
-    @FindBy(id = "passwd")
-    private WebElement passwordForm;
+    private WebElement email;
+
+    @FindBy (id = "passwd")
+    private WebElement password;
+
     By signInPageLocator = By.id("authentication");
     By signInSuccessLocator = By.id("my-account");
     By submitLoginButton = By.id("SubmitLogin");
@@ -29,12 +31,12 @@ public class SignInPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(signInPageLocator));
     }
 
-    public void fillTheEmail(String email){
-        emailForm.sendKeys("seleniumisgood@mail.com");
+    public void fillTheEmail(String emailField){
+        email.sendKeys(emailField);
     }
 
-    public void fillThePassword(String password){
-        passwordForm.sendKeys("123456");
+    public void fillThePassword(String passwordField){
+        password.sendKeys(passwordField);
     }
 
     public void clickOnSubmitLoginButton(){
